@@ -1,9 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>我的第一个博客</title>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <script src="//cdn.bootcss.com/marked/0.3.6/marked.js"></script>
 </head>
 <body>
-这是内容
+<div id="content">
+  # 我的第一个博客
+  **xj**
+  纸上得来终觉浅
+  今天我学习了Markdown！
+</div>
+  <script>
+    window.onload = function(){
+    var content =  document.getElementById('content');
+    var markdown = content.innerHTML;
+    var html = marked(markdown);
+      content.innerHTML = html;
+    }
+  </script>
 </body>
 </html>
